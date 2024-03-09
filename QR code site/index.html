@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title> Générateur de QR code</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="qrcode.min.js"></script>
+        <script src="function.js" async></script>
+    </head>
+    
+    <body>
+        <section> <!-- créer une boite -->
+            <label> Entrez votre titre de QR code </label> <!-- afficher le titre -->
+            <input id="text" type="text" class="qr_texte" placeholder="Titre du QR code"> <!-- rentrer le texte ou le lien -->
+            
+            <!-- mettre les deux boutons dans la meme ligne -->
+            <button_section>
+                <!-- Création du menu d'option -->
+                <button id="opt_button" class="opt_button" onclick="myFunction()">Opt</button>
+                <button id="qr_button" class="qr_button" onclick="makeCode()">Générer</button>
+            </button_section>
+            <button id="download" class="download_button" onclick="Download()">Download</button>
+            
+            <option_section id="opt_text">
+                <input id="option1" type="text" class="opt_text" placeholder="Année scolaire">
+                <input id="option2" type="text" class="opt_text" placeholder="Nom">
+                <input id="option3" type="text" class="opt_text" placeholder="Prenom">
+                <input id="option4" type="text" class="opt_text" placeholder="Classe">
+                <input id="option5" type="text" class="opt_text" placeholder="Date de naissance">
+            </option_section>
+            
+            <div class="qr_code", id="qrcode"></div> <!-- generer le QR code -->
+        </section>
+    </body>
+</html>
